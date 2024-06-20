@@ -15,21 +15,21 @@ const moviesSlice = createSlice({
         setMovies: (state, action) => {
             state.movies = action.payload;
             state.filteredMovies = action.payload;
-            const categories = new Set(action.payload.map(movie => movie.category));
-            state.categories = Array.from(categories);
+            state.categories = [...new Set(action.payload.map(movie => movie.category))];
         },
         deleteMovie: (state, action) => {
             state.movies = state.movies.filter(movie => movie.id !== action.payload);
             state.filteredMovies = state.filteredMovies.filter(movie => movie.id !== action.payload);
-            const categories = new Set(state.movies.map(movie => movie.category));
-            state.categories = Array.from(categories);
+            state.categories = [...new Set(state.movies.map(movie => movie.category))];
         },
         toggleLike: (state, action) => {
-            const movie = state.movies.find(movie => movie.id === action.payload);
-            if (movie) {
-                movie.liked = !movie.liked;
-                movie.likes += movie.liked ? 1 : -1;
-            }
+            const movieId = action.payload;
+            state.movies = state.movies.map(movie =>
+                movie.id === movieId
+                    ? { ...movie, liked: !movie.liked, likes: movie.liked ? movie.likes - 1 : movie.likes + 1 }
+                    : movie
+            );
+            state.filteredMovies = state.movies;
         },
         filterByCategory: (state, action) => {
             state.filteredMovies = state.movies.filter(movie => action.payload.includes(movie.category));
