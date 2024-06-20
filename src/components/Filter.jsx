@@ -12,11 +12,14 @@ const Filter = () => {
     };
 
     return (
-        <select multiple onChange={handleChange}>
-            {categories.map(category => (
-                <option key={category} value={category}>{category}</option>
-            ))}
-        </select>
+        <div className="mb-3">
+            <label htmlFor="categoryFilter" className="form-label">Categories :</label>
+            <select id="categoryFilter" className="form-select" multiple onChange={handleChange}>
+                {categories.map(category => (
+                    <option key={category} value={category}>{category}</option>
+                ))}
+            </select>
+        </div>
     );
 };
 

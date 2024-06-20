@@ -26,11 +26,15 @@ const Pagination = () => {
     };
 
     return (
-        <div className="pagination">
-            <button onClick={handlePreviousPage} disabled={currentPage === 1}>Précédent</button>
+        <div className="d-flex justify-content-between align-items-center mt-3">
+            <button className="btn btn-secondary" onClick={handlePreviousPage} disabled={currentPage === 1}>
+                Précédent
+            </button>
             <span>{currentPage} / {totalPages}</span>
-            <button onClick={handleNextPage} disabled={currentPage === totalPages}>Suivant</button>
-            <select onChange={handleItemsPerPageChange} value={itemsPerPage}>
+            <button className="btn btn-secondary" onClick={handleNextPage} disabled={currentPage === totalPages}>
+                Suivant
+            </button>
+            <select className="form-select w-auto ms-2" onChange={handleItemsPerPageChange} value={itemsPerPage}>
                 <option value={4}>4</option>
                 <option value={8}>8</option>
                 <option value={12}>12</option>

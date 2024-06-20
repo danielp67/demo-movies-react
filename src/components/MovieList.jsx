@@ -28,7 +28,7 @@ const MovieList = () => {
     return (
         <div>
             <Filter />
-            <div className="movie-list">
+            <div className="d-flex flex-wrap">
                 {selectedMovies.map(movie => (
                     <MovieCard key={movie.id} movie={movie} />
                 ))}

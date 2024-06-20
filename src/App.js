@@ -4,9 +4,9 @@ import MovieList from './components/MovieList';
 
 const App = () => {
     return (
-        <div className="App">
-            <h1>Demo : Movie Cards in React</h1>
-            <MovieList />
+        <div className="App container">
+            <h1 className="my-4">Movie Cards in React</h1>
+            <MovieList/>
         </div>
     );
 };
