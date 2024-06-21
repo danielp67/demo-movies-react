@@ -7,10 +7,10 @@ Il s'agit d'un projet React pour gérer une liste de films. Il inclut des foncti
 ## Fonctionnalités
 
 - **Affichage des films :** Les films sont affichés dans des cartes avec le titre, la catégorie et une barre de progression pour les likes/dislikes.
-- **Suppression de films :** Chaque carte a un bouton pour supprimer le film.
-- **Toggle Like/Dislike :** Chaque carte a un bouton pour basculer entre like et dislike.
+- **Suppression de films :** Bouton pour supprimer le film.
+- **Toggle Like/Dislike :** Bouton pour basculer entre like et dislike.
 - **Filtrage par catégorie :** Filtrez les films par catégories à l'aide d'un menu déroulant multi-sélection.
-- **Disposition responsive :** Les cartes de films s'affichent de manière réactive, s'adaptant à la taille de l'écran.
+- **Disposition responsive :** Les cartes de films s'affichent de manière responsive, s'adaptant à la taille de l'écran.
 - **Pagination :** Supporte la pagination avec des options pour choisir le nombre d'éléments par page (4, 8 ou 12).
 
 ## Installation
@@ -20,7 +20,7 @@ Suivez ces étapes pour configurer le projet sur votre machine locale :
 1. **Cloner le dépôt :**
 
     ```bash
-    git clone https://github.com/votreutilisateur/demo-movies-react.git
+    git clone https://github.com/danielp67/demo-movies-react.git
     cd demo-movies-react
     ```
 
@@ -44,6 +44,8 @@ Suivez ces étapes pour configurer le projet sur votre machine locale :
 ## Améliorations futures
 
 - Ajouter des informations plus détaillées sur les films dans les cartes.
-- Implémenter une fonctionnalité de recherche.
+- Implémenter une fonctionnalité de recherche type autocomplete.
 - Améliorer l'UI/UX avec des styles et des animations plus avancés.
 
+
+Exemple de projet similaire que j'ai réalisé en React (il s'agit de mon premier projet en React) : [Online Game en React](https://github.com/danielp67/Online_Games_React_JS/tree/dev)
